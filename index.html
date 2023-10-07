@@ -1,0 +1,154 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="custom.css" />
+
+    <title>Document</title>
+  </head>
+  <body style="display: flex">
+    <div class="sidebar">
+      <div class="sidebar-items">
+        <ul type="none">
+          <li>
+            <a
+              href="#"
+              id="stackLink"
+              class="tablinks active"
+              onclick="dataSturcureTab('stackLink','stackPannel')"
+              ><img src="images/stack1.png" />
+              <p>Stack</p></a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              id="queueLink"
+              class="tablinks"
+              onclick="dataSturcureTab('queueLink','queuePannel')"
+              ><img src="images/queue1.png" />
+              <p>Circular Queue</p></a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              id="linkedListLink"
+              class="tablinks"
+              onclick="dataSturcureTab('linkedListLink','linkedlistPannel')"
+              ><img src="images/stack1.png" />
+              <p>Stack Theory</p></a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              id="treeLink"
+              class="tablinks"
+              onclick="dataSturcureTab('treeLink','treePannel')"
+              ><img src="images/queue1.png" />
+              <p>Queue Theory</p></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="stackPannel" class="tabcontent" style="display: block">
+      <div class="stack-opratons">
+      
+        <input type="number" id="Form"/>
+        <button type="submit" id="push" onclick="push()" value="Push">
+          Push    
+        </button>
+        <button type="submit" id="pop" onclick="pop()" value="Pop">Pop</button>
+        <button type="submit" id="Reset" type="reset" onclick="resetStack()" value="Pop">
+          Reset
+        </button>
+      
+      </div>
+
+      <div class="container">
+        <div class="main-stack">
+          
+          <!-- <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div> -->
+        </div>
+        <div class="line"></div>
+        <div class="stack-discription">
+          <p>Top of the Stack :-<span id="topstack"></span></p>
+
+          <p>Size of the Stack:-<span>5</span></p>
+          <div class="message-box">
+            <h3>Message Box</h3>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="queuePannel" class="tabcontent">
+      <div class="queuePannel">
+        <div class="Queue-opratons">
+          <input type="number" id="queueForm"/>
+          <button type="submit" id="enqueue" onclick="enqueue()" value="enqueue">
+            Enqueue
+          </button>
+          <button type="submit" id="dequeue" onclick="dequeue()" value="enqueue">
+            Dequeue
+          </button>
+          <button type="submit" id="Reset" onclick="resetQueue()" value="reset">
+            Reset
+          </button>
+        </div>
+        <div class="mainQueue">
+        
+        </div>
+        <div style="display:flex"> 
+          <div style="line-height: 3;margin: 50px 0px 0px 45px;" id="queueDescreption">
+          <p>Front of the Queue :-<span id="front"></span></p>
+          <p>Rear of the Queue :-<span id="rear"></span></p>
+          <p>Size of the Queue :-&nbsp;&nbsp;<span>5</span></p>
+        </div>
+        <div class="message-box" style="margin-top: 50px;">
+          <h3>Message Box</h3>
+          <p style="text-align:center;margin-top:45px;"></p>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div id="linkedlistPannel" class="tabcontent">
+      <div class="stackTheory">
+        <h1> What is stack?</h1>
+        <p>A Stack is a linear data structure that follows the <b>LIFO (Last-In-First-Out)</b>principle. 
+          Stack has one end, whereas the Queue has two ends <b>(front and rear)</b>. 
+          It contains only one pointer top pointer pointing to the topmost element of the stack. 
+          Whenever an element is added in the stack, it is added on the top of the stack, and the element can be deleted only from the stack. 
+          In other words, <b><i>a stack can be defined as a container in which insertion and deletion can be done from the one end known as the top of the stack.</i></b></p>
+          <img src="images/stackVisual.png" height="300" width="560">
+      </div>
+      
+    </div>
+
+    <div id="treePannel" class="tabcontent">
+      <div class="stackTheory">
+        <h1>What is Queue?</h1>
+        <p>We define a queue to be a list in which all additions to the list are made at one end, and all deletions from the list are made at the other end.  
+          The element which is first pushed into the order, the operation is first performed on that.
+        </p>
+        <h3>FIFO Principle of Queue:</h3>
+        <ul>
+          <li>A Queue is like a line waiting to purchase tickets, where the first person in line is the first person served. 
+            (i.e. First come first serve).</li>
+          <li>Position of the entry in a queue ready to be served, that is, the first entry that will be removed from the queue, is called the front of the queue(sometimes, head of the queue), similarly, the position of the last entry in the queue, that is, the one most recently added, is called the rear (or the tail) of the queue. See the below figure.</li>
+        </ul>
+          <img src="images/queueTheory.png" height="300" width="560">
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
